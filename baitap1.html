@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>baitap1</title>
+        <meta charset="utf-8">
+        <style>
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            ul {
+                list-style: none;
+            }
+            body {
+                color: rgb(5, 5, 5);
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 20px;
+                display:flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+    
+                box-sizing: border-box;
+            }
+            .bestshared {
+                margin-top: -100px;
+                text-align: center;
+                width: 100%;
+
+            }
+            .logo {
+                padding-bottom: 20px;
+            }
+            .bestshared h2 {
+                font-size: 60px;
+            }
+            .bestshared h2 b {
+                color: aqua;
+                font-weight: 20300;
+            }
+            .lead-text{
+                padding-top: 20px;
+                padding-bottom: 50px;
+            }
+            .list li{
+                display: inline-block;
+                margin: 0 10px;
+                font-size: 16px;
+            }
+            .list li a{
+                text-decoration: none;
+                background-color: rgb(0, 0, 0);
+                height: 56px;
+                min-width: 156px;
+                width: 156px;
+                color: rgb(255, 255, 255);
+                padding: 5px;
+                border: 2px;
+                border-radius: 3%;
+                box-sizing: border-box;
+                align-items: center;
+                justify-content: center;
+                display: inline-flex;
+            }
+            .list li a:hover {
+                background-color: red;
+            }
+
+        </style>
+    </head> 
+    <body>
+        <section class="bestshared">
+            <p class="logo"><img src="data:image/png;base64,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" alt=""></p>
+            <h2>Best <b>Shared Hosting</b> Company</h2><br>
+            <p class="lead-text">With this responsive landing page template, you can promote your all hosting, domain and email services.</p>
+            <ul class="list">
+                <li><a href="/thuchanh/contact.html">View plan</a></li>
+                <li><a href="/thuchanh/content.html">All Freatures</a></li>
+            </ul>
+        </section>
+    </body>
+</html>
+<!--
+Những điểm cần lưu ý trong bài tập này:
+    - section co noi dung, ý nghĩa rõ ràng, có tiêu đề nội dung nên khi code có thể ưu tiên sử dụng,
+    - div dung để chia các vùng, ô trên màn hình web
+    - css đầu luôn phải đặt trước
+        1 Reset mặc định trước( ví dụ * {margin: 0;padding: 0;box sizing: border box;})
+        2 Sau đó tới css tổng thể cho body (Ví dụ front-family, front-size,color)
+        3 Tiếp theo là các layout lớn nhất như: section, container...
+        4 Sau đó là các layout từ lớn tới bé.
+        5 Nếu có hiệu ứng dùng mã giả thì là bước cuối trong css.
+Các thẻ cần quan tâm:
+    - Để căn giữa màn hình cho section cần dùng thẻ align item: căn theo chiều dọc justify-content là chiều ngang.
+    - Trước khi căn giữa cần xác định chiều cao của khối
+    - Xác đinhk display trước khi thực hiện
+-->
